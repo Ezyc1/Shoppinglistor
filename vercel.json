@@ -1,12 +1,15 @@
 {
-    "builds": [
-      {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build"
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/manage.py" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "shoppinglistor/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "shoppinglistor/wsgi.py"
+    }
+  ]
+}
