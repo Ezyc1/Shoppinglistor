@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from django.contrib.auth import views as auth_views
+from listor.views import index
 
 urlpatterns = [
     path('', views.AllaListor.as_view(), name='lista-hem'),
@@ -19,5 +20,5 @@ urlpatterns = [
     path('registrera/', views.registrera, name='registrera'),
     path('loggain/',auth_views.LoginView.as_view(template_name='listor/loggain.html'),name='loggain'),
     path('loggaut/',auth_views.LogoutView.as_view(template_name='listor/loggaut.html'),name='loggaut'),
-
+    path('', index),
 ]

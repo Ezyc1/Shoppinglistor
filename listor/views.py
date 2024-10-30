@@ -2,13 +2,14 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from .models import List, Item, SharedList
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, View
 from .forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your views here.
 class AllaListor(LoginRequiredMixin, ListView):
@@ -173,3 +174,15 @@ def registrera(request):
     else:
         form = UserRegisterForm()
     return render(request, 'listor/registrera.html', {'form': form})
+
+def index(request):
+    now = datetime.now()
+    html = f'''
+    <html>
+        <body>
+            <h1>Hello from Vercel!</h1>
+            <p>The current time is { now }.</p>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
