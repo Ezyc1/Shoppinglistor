@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "./build_files.sh",
+  "buildCommand": "build_files.sh",
   "routes": [
       {
           "src": "/static/(.*)",
