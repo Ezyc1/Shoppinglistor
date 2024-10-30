@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "./build_files.sh",
+  "routes": [
+      {
+          "src": "/static/(.*)",
+          "dest": "/static/$1"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "shoppinglistor/wsgi.py"
+      }
+  ]
+}
