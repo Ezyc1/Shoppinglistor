@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q25-7sh37d7yhlwo$u-@+1f0#iyw!*tws1tmgyi=qzqem7r7%i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://shoppinglist-rosy.vercel.app/']
+ALLOWED_HOSTS = ['https://shoppinglistor-xi.vercel.app/']
 
 
 # Application definition
